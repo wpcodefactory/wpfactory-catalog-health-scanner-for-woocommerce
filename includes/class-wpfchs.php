@@ -119,12 +119,37 @@ final class WPFCHS {
 			array( WPFCHS_FILE, WPFCHS_FILE_FREE ) :
 			array( WPFCHS_FILE )
 		);
+		/**
+		 * WooCommerce features this plugin is compatible with.
+		 *
+		 * Anything not declared shows on WooCommerce's compatibility screen as
+		 * "uncertain", which surfaces to the store owner as a red incompatibility
+		 * banner across wp-admin — so every feature we can honestly claim must be
+		 * claimed. Only claims that are actually true belong here:
+		 *
+		 * - custom_order_tables: nothing reads the legacy order store. Asserted
+		 *   by qa-hpos.php, which greps the whole tree for order-store calls.
+		 * - cart_checkout_blocks: this plugin registers no cart or checkout
+		 *   hooks, templates, scripts or blocks at all — it is an admin-side
+		 *   catalog auditor and never touches the purchase flow.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param array $features Feature slugs.
+		 */
+		$features = apply_filters(
+			'wpfchs_compatible_wc_features',
+			array( 'custom_order_tables', 'cart_checkout_blocks' )
+		);
+
 		foreach ( $files as $file ) {
-			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
-				'custom_order_tables',
-				$file,
-				true
-			);
+			foreach ( $features as $feature ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+					$feature,
+					$file,
+					true
+				);
+			}
 		}
 	}
 

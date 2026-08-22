@@ -3,7 +3,7 @@
  * Plugin Name: WPFactory Catalog Health Scanner for WooCommerce
  * Plugin URI: https://wordpress.org/plugins/wpfactory-catalog-health-scanner-for-woocommerce/
  * Description: Scan your WooCommerce catalog and find the products that are silently costing you sales.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: WPFactory
  * Author URI: https://wpfactory.com
  * Requires at least: 6.0
@@ -40,7 +40,7 @@ if ( 'wpfactory-catalog-health-scanner-for-woocommerce.php' === basename( __FILE
 	}
 }
 
-defined( 'WPFCHS_VERSION' ) || define( 'WPFCHS_VERSION', '1.0.0' );
+defined( 'WPFCHS_VERSION' ) || define( 'WPFCHS_VERSION', '1.1.0' );
 
 defined( 'WPFCHS_FILE' ) || define( 'WPFCHS_FILE', __FILE__ );
 

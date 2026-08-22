@@ -4,7 +4,7 @@ Tags: woocommerce, products, audit, catalog, inventory
 Requires at least: 6.0
 Requires PHP: 7.4
 Tested up to: 7.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,7 +33,7 @@ Catalog Health Scanner checks every product and variation against a library of 7
 
 The free version scans everything and hides nothing: all 70 checks, every profile, the full dashboard, the health score and trend, ignore/restore, CSV export, and fixing products one at a time — each fix previewed and undoable.
 
-[WPFactory Catalog Health Scanner for WooCommerce Pro](https://wpfactory.com/item/wpfactory-catalog-health-scanner-for-woocommerce/) unlocks the automation on top:
+[WPFactory Catalog Health Scanner for WooCommerce Pro](https://wpfactory.com/item/catalog-health-scanner-for-woocommerce/) is a separate plugin that adds the automation on top:
 
 * **Bulk fixing** — apply a previewed fix to every affected product in one click, including "Fix all quick wins" from the dashboard.
 * **Scheduled scans** with an email digest that only arrives when there is something new, plus immediate critical alerts.
@@ -76,7 +76,7 @@ Yes, compatibility is declared and tested with WooCommerce's custom order tables
 
 = What exactly does Pro add? =
 
-Bulk fixing (apply a previewed fix to all affected products at once), scheduled scans with an email digest and critical alerts, optional auto-fix after scheduled scans, the white-label PDF audit report, and scan comparison. Everything else — all 70 checks included — is in the free version, and Pro features are visible (locked) in the free UI so you can see what you would get.
+Bulk fixing (apply a previewed fix to all affected products at once), scheduled scans with an email digest and critical alerts, optional auto-fix after scheduled scans, the white-label PDF audit report, and scan comparison. Those features live in a separate Pro plugin and are not part of this one. Everything else — all 70 checks included — is here, complete and unrestricted.
 
 == Screenshots ==
 
@@ -91,10 +91,35 @@ Bulk fixing (apply a previewed fix to all affected products at once), scheduled 
 
 == Upgrade Notice ==
 
+= 1.1.0 =
+Adds changes-only rescanning, fixes applicability so a check group is only skipped when its own condition is unmet, and makes the dashboard and the PDF report agree on every figure. Recommended for all users.
+
 = 1.0.0 =
 Initial release.
 
 == Changelog ==
+
+= 1.1.0 =
+* Dev - Renamed to "WPFactory Catalog Health Scanner for WooCommerce".
+* Dev - Changes-only rescan: after a first scan, the dashboard offers to visit just the products edited since then, labelled with the count. On a 3,000-product catalog that is roughly eight seconds instead of four minutes. It never resolves findings on products it did not visit, and says so on the dashboard.
+* Dev - Applicability now decides per check group rather than per category, so a group is only skipped when its own condition is unmet. SKU checks no longer switch off with store-wide stock management, shipping-class checks no longer switch off because no rate prices by weight, and "tax status: none" no longer switches off for want of a second tax class.
+* Dev - Catalog and quote-based stores are detected, and are no longer marked down for products without prices. Confirmed by a new first question in the setup wizard.
+* Dev - Every applicability reason now names the condition actually detected instead of listing the ones it might have been.
+* Dev - Store-wide findings (such as missing structured data) are reported and counted once, with the number of products they reach shown as context, rather than once per product.
+* Dev - The PDF report leads with the critical banner, orders findings by severity before reach, prints the plain-language explanation and names affected products for every Critical and High finding, declares which check groups were excluded and why, and closes with the single highest-priority action.
+* Dev - Health badges follow severity: nothing reads better than "Critical issues open" while a critical is open. Category card colour follows the score band, with severity shown as a separate chip.
+* Fix - The dashboard and the PDF report could disagree about the same scan. Both now read one source for the health score, the open-issue total, the critical count, per-category scores and the excluded list.
+* Fix - Per-category issue counts multiplied store-wide findings by the number of products they reached, so a category could appear to be the largest problem when it was not. Category counts now sum to the headline total.
+* Fix - Category cards scoring between 70% and 75% were coloured as failing, and score denominators were rounded to whole numbers so a card could show "3.5 / 4" for a category actually scoring 98.9%.
+* Fix - PDF text encoding: en dashes, em dashes, curly quotes and angle quotes rendered as "?", and HTML entities in product names printed literally. Genuinely corrupt product titles are still reproduced exactly, since reporting them is the point.
+* Fix - A scan whose worker was interrupted stayed "running" forever and blocked every later scan. A stall watchdog now recovers from it.
+* Fix - The final request of a scan was unbounded and could exceed a host's execution limit on large catalogs, leaving the scan stranded. Every request is now budgeted and resumable.
+* Fix - Settings reset kept scan history but presented it as current, so finishing the setup wizard landed on results from before the reset. Stale results are now flagged with a rescan prompt.
+* Fix - The score trend plotted scans that measured nothing as 0%.
+* Fix - Error notices faded after six seconds, so a failure could look like nothing had happened. They now stay until dismissed.
+* Fix - Declared compatibility with WooCommerce feature flags beyond High-Performance Order Storage, clearing the plugin from WooCommerce's incompatible-plugins list.
+* WC tested up to: 10.9.
+
 
 = 1.0.0 - 01/08/2026 =
 * Initial release.
@@ -119,5 +144,4 @@ Initial release.
 * Fix - Undo for stock-status and tax-class fixes silently failed, because WooCommerce re-normalises those fields on save.
 * Fix - Ignored issues are now declared next to the score and on the PDF cover, instead of a fully-ignored catalog reading as 100% healthy.
 * Dev - Issue groups without an automatic fix now name their action ("View 7 products") instead of a generic "Review".
-* Dev - Free/Pro split: bulk fixing, fix-all quick wins, scheduled scans + digest + alerts + auto-fix, the PDF report and white label, and scan comparison are Pro; the free build shows each of them locked in place with an upgrade path, enforced server-side.
 * WC tested up to: 10.9.
