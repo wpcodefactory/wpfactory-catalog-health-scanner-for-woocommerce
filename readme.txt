@@ -4,7 +4,7 @@ Tags: woocommerce, products, audit, catalog, inventory
 Requires at least: 6.0
 Requires PHP: 7.4
 Tested up to: 7.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -91,13 +91,23 @@ Bulk fixing (apply a previewed fix to all affected products at once), scheduled 
 
 == Upgrade Notice ==
 
+= 1.1.1 =
+Adds WPFactory Key Manager. Updates WPFactory Admin Menu, WPFactory Cross-Selling, WPFactory Promoting Notice.
+
 = 1.1.0 =
-Adds changes-only rescanning, fixes applicability so a check group is only skipped when its own condition is unmet, and makes the dashboard and the PDF report agree on every figure. Recommended for all users.
+Adds changes-only rescanning, redesigns the first page of the report around the health score and severity split, fixes applicability so a check group is only skipped when its own condition is unmet, and makes the dashboard and the PDF report agree on every figure. Recommended for all users.
 
 = 1.0.0 =
 Initial release.
 
 == Changelog ==
+
+= 1.1.1 - 13/11/2026 =
+* Dev - WPFactory Key Manager - Added.
+* Dev - WPFactory Admin Menu - Library updated (to v1.1.4).
+* Dev - WPFactory Cross-Selling - Library updated (to v1.1.7).
+* Dev - WPFactory Promoting Notice - Library updated (to v1.0.7).
+* WC tested up to: 11.3.
 
 = 1.1.0 =
 * Dev - Renamed to "WPFactory Catalog Health Scanner for WooCommerce".
@@ -107,6 +117,7 @@ Initial release.
 * Dev - Every applicability reason now names the condition actually detected instead of listing the ones it might have been.
 * Dev - Store-wide findings (such as missing structured data) are reported and counted once, with the number of products they reach shown as context, rather than once per product.
 * Dev - The PDF report leads with the critical banner, orders findings by severity before reach, prints the plain-language explanation and names affected products for every Critical and High finding, declares which check groups were excluded and why, and closes with the single highest-priority action.
+* Dev - The report's first page is now a designed executive summary rather than a data dump: the health score as a ring in its band colour with the status chip beneath it, the severity split as a stacked bar instead of a written sentence, the critical banner, and the headline figures stated once instead of twice. It stays legible printed in greyscale, because the severity word always accompanies the colour, and the white-label header holds with an agency logo present or absent.
 * Dev - Health badges follow severity: nothing reads better than "Critical issues open" while a critical is open. Category card colour follows the score band, with severity shown as a separate chip.
 * Fix - The dashboard and the PDF report could disagree about the same scan. Both now read one source for the health score, the open-issue total, the critical count, per-category scores and the excluded list.
 * Fix - Per-category issue counts multiplied store-wide findings by the number of products they reached, so a category could appear to be the largest problem when it was not. Category counts now sum to the headline total.
