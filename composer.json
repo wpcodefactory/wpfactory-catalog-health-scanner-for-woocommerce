@@ -2,10 +2,6 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/wpcodefactory/wpfactory-promoting-notice"
-    },
-    {
-      "type": "vcs",
       "url": "https://github.com/wpcodefactory/wpfactory-cross-selling"
     },
     {
@@ -14,7 +10,6 @@
     }
   ],
   "require": {
-    "wpfactory/wpfactory-promoting-notice": "*",
     "wpfactory/wpfactory-cross-selling": "*",
     "wpfactory/wpfactory-admin-menu": "*"
   },

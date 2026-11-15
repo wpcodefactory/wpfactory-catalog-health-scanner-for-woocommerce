@@ -105,38 +105,6 @@
                 "issues": "https://github.com/wpcodefactory/wpfactory-cross-selling/issues"
             },
             "install-path": "../wpfactory/wpfactory-cross-selling"
-        },
-        {
-            "name": "wpfactory/wpfactory-promoting-notice",
-            "version": "v1.0.7",
-            "version_normalized": "1.0.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wpcodefactory/wpfactory-promoting-notice.git",
-                "reference": "c4e47db91f086daa24026383d730cab534f3eaa7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wpcodefactory/wpfactory-promoting-notice/zipball/c4e47db91f086daa24026383d730cab534f3eaa7",
-                "reference": "c4e47db91f086daa24026383d730cab534f3eaa7",
-                "shasum": ""
-            },
-            "time": "2026-07-15T20:45:17+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "classmap": [
-                    "src/php/"
-                ],
-                "files": [
-                    "src/php/functions.php"
-                ]
-            },
-            "support": {
-                "source": "https://github.com/wpcodefactory/wpfactory-promoting-notice/tree/v1.0.7",
-                "issues": "https://github.com/wpcodefactory/wpfactory-promoting-notice/issues"
-            },
-            "install-path": "../wpfactory/wpfactory-promoting-notice"
         }
     ],
     "dev": true,

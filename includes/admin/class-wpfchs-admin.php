@@ -286,9 +286,6 @@ class WPFCHS_Admin {
 			array(
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
 				'nonce'    => wp_create_nonce( 'wpfchs-admin' ),
-				// Presentation only — every Pro feature is enforced
-				// server-side. This just decides whether a wall is drawn
-				// before the request instead of after it.
 				'i18n'     => array(
 					'scanning'       => __( 'Scanning…', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
 					'scan_complete'  => __( 'Scan complete.', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
@@ -314,12 +311,6 @@ class WPFCHS_Admin {
 					'choose_logo'    => __( 'Choose report logo', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
 					'use_logo'       => __( 'Use this logo', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
 					'apply_fixes'    => __( 'Apply all fixes', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
-					'unlock'         => __( 'Unlock with Pro', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
-					/* translators: %s: feature name. */
-					'pro_feature'    => __( '%s is a Pro feature', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
-					'pro_generic'    => __( 'This feature', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
-					'pro_body'       => __( 'Available in the Pro version, along with bulk fixing, scheduled scans, email alerts, scan comparison, and the white-label PDF audit report.', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
-					'pro_free_hint'  => __( 'The free version fixes one product at a time. Pro applies a reviewed fix to every affected product in one click.', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
 					/* translators: %d: number of selected products that will be ignored. */
 					'confirm_ignore_selected'  => __( 'Ignore %d selected products for this check? They will count as passing until you restore them from Settings.', 'wpfactory-catalog-health-scanner-for-woocommerce' ),
 					/* translators: %d: total number of products that will be ignored. */
