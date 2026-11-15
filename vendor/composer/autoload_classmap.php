@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'WPFactory\\Promoting_Notice\\Core' => $vendorDir . '/wpfactory/wpfactory-promoting-notice/src/php/class-core.php',
     'WPFactory\\WPFactory_Admin_Menu\\Plugin_Icon' => $vendorDir . '/wpfactory/wpfactory-admin-menu/src/php/class-plugin-icon.php',
     'WPFactory\\WPFactory_Admin_Menu\\Singleton' => $vendorDir . '/wpfactory/wpfactory-admin-menu/src/php/trait-singleton.php',
     'WPFactory\\WPFactory_Admin_Menu\\WC_Settings_Menu_Item_Swapper' => $vendorDir . '/wpfactory/wpfactory-admin-menu/src/php/class-wc-settings-menu-item-swapper.php',

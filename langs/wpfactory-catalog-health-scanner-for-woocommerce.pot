@@ -93,23 +93,23 @@ msgid "All severities"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin-category.php:259
-#: includes/admin/class-wpfchs-admin.php:472
+#: includes/admin/class-wpfchs-admin.php:463
 #: includes/class-wpfchs-scores.php:200
 msgid "Critical"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin-category.php:260
-#: includes/admin/class-wpfchs-admin.php:473
+#: includes/admin/class-wpfchs-admin.php:464
 msgid "High"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin-category.php:261
-#: includes/admin/class-wpfchs-admin.php:474
+#: includes/admin/class-wpfchs-admin.php:465
 msgid "Medium"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin-category.php:262
-#: includes/admin/class-wpfchs-admin.php:475
+#: includes/admin/class-wpfchs-admin.php:466
 msgid "Low"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgid "Pause"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin-dashboard.php:91
-#: includes/admin/class-wpfchs-admin.php:307
+#: includes/admin/class-wpfchs-admin.php:304
 msgid "Cancel"
 msgstr ""
 
@@ -462,7 +462,7 @@ msgid "Undone"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin-history.php:144
-#: includes/admin/class-wpfchs-admin.php:300
+#: includes/admin/class-wpfchs-admin.php:297
 msgid "Undo"
 msgstr ""
 
@@ -508,7 +508,7 @@ msgid "Profiles saved."
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin-profiles.php:119
-#: includes/admin/class-wpfchs-admin.php:425
+#: includes/admin/class-wpfchs-admin.php:416
 msgid "Profiles"
 msgstr ""
 
@@ -1091,12 +1091,12 @@ msgstr ""
 #: includes/admin/class-wpfchs-admin.php:140
 #: includes/admin/class-wpfchs-admin.php:151
 #: includes/admin/class-wpfchs-admin.php:162
-#: includes/admin/class-wpfchs-admin.php:376
+#: includes/admin/class-wpfchs-admin.php:367
 msgid "Catalog Health Scanner"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin.php:163
-#: includes/admin/class-wpfchs-admin.php:416
+#: includes/admin/class-wpfchs-admin.php:407
 #: includes/class-wpfchs.php:211
 msgid "Dashboard"
 msgstr ""
@@ -1106,7 +1106,7 @@ msgid "Scan Profiles"
 msgstr ""
 
 #: includes/admin/class-wpfchs-admin.php:186
-#: includes/admin/class-wpfchs-admin.php:429
+#: includes/admin/class-wpfchs-admin.php:420
 #: includes/class-wpfchs.php:217
 msgid "Settings"
 msgstr ""
@@ -1115,136 +1115,115 @@ msgstr ""
 msgid "Catalog Health Scanner Setup"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:293
+#: includes/admin/class-wpfchs-admin.php:290
 msgid "Scanning…"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:294
+#: includes/admin/class-wpfchs-admin.php:291
 msgid "Scan complete."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:295
+#: includes/admin/class-wpfchs-admin.php:292
 msgid "The scan could not continue. You can resume it from the dashboard."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:296
+#: includes/admin/class-wpfchs-admin.php:293
 msgid "Cancel this scan? Progress so far is kept."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:297
+#: includes/admin/class-wpfchs-admin.php:294
 msgid "Ignored. This check will no longer flag this product."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:298
+#: includes/admin/class-wpfchs-admin.php:295
 msgid "Restored."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:299
+#: includes/admin/class-wpfchs-admin.php:296
 msgid "Fixed."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:301
+#: includes/admin/class-wpfchs-admin.php:298
 msgid "Fix undone. The issues are open again."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:302
+#: includes/admin/class-wpfchs-admin.php:299
 msgid "Something went wrong. Please try again."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:303
+#: includes/admin/class-wpfchs-admin.php:300
 msgid "Loading…"
 msgstr ""
 
 #. translators: %d: number of products the fix will be applied to.
-#: includes/admin/class-wpfchs-admin.php:305
+#: includes/admin/class-wpfchs-admin.php:302
 msgid "Apply to %d products"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:306
+#: includes/admin/class-wpfchs-admin.php:303
 #: includes/admin/class-wpfchs-ajax.php:547
 #: includes/admin/class-wpfchs-ajax.php:587
 msgid "Select at least one product first."
 msgstr ""
 
 #. translators: %d: number of rows currently selected.
-#: includes/admin/class-wpfchs-admin.php:309
+#: includes/admin/class-wpfchs-admin.php:306
 msgid "%d selected"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:310
+#: includes/admin/class-wpfchs-admin.php:307
 msgid "Delete this profile? Scans that used it keep their history."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:311
+#: includes/admin/class-wpfchs-admin.php:308
 msgid "Reset all settings and re-run the setup wizard? Scan history is kept."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:312
+#: includes/admin/class-wpfchs-admin.php:309
 msgid "Preview and apply all auto-fixable quick wins?"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:313
+#: includes/admin/class-wpfchs-admin.php:310
 msgid "Applying fixes…"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:314
+#: includes/admin/class-wpfchs-admin.php:305
 msgid "Choose report logo"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:315
+#: includes/admin/class-wpfchs-admin.php:306
 msgid "Use this logo"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:316
+#: includes/admin/class-wpfchs-admin.php:307
 msgid "Apply all fixes"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:317
-msgid "Unlock with Pro"
-msgstr ""
-
-#. translators: %s: feature name.
-#: includes/admin/class-wpfchs-admin.php:319
-msgid "%s is a Pro feature"
-msgstr ""
-
-#: includes/admin/class-wpfchs-admin.php:320
-msgid "This feature"
-msgstr ""
-
-#: includes/admin/class-wpfchs-admin.php:321
-msgid "Available in the Pro version, along with bulk fixing, scheduled scans, email alerts, scan comparison, and the white-label PDF audit report."
-msgstr ""
-
-#: includes/admin/class-wpfchs-admin.php:322
-msgid "The free version fixes one product at a time. Pro applies a reviewed fix to every affected product in one click."
-msgstr ""
-
 #. translators: %d: number of selected products that will be ignored.
-#: includes/admin/class-wpfchs-admin.php:324
+#: includes/admin/class-wpfchs-admin.php:315
 msgid "Ignore %d selected products for this check? They will count as passing until you restore them from Settings."
 msgstr ""
 
 #. translators: %d: total number of products that will be ignored.
-#: includes/admin/class-wpfchs-admin.php:326
+#: includes/admin/class-wpfchs-admin.php:317
 msgid "Ignore all %d products for this check? They will count as passing until you restore them from Settings."
 msgstr ""
 
 #. translators: %d: number of selected issues that will be restored.
-#: includes/admin/class-wpfchs-admin.php:328
+#: includes/admin/class-wpfchs-admin.php:319
 msgid "Restore %d selected issues? They become open again and count against your score."
 msgstr ""
 
 #. translators: %d: total number of ignored issues that will be restored.
-#: includes/admin/class-wpfchs-admin.php:330
+#: includes/admin/class-wpfchs-admin.php:321
 msgid "Restore all %d ignored issues? They become open again and count against your score."
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:418
+#: includes/admin/class-wpfchs-admin.php:409
 msgid "History"
 msgstr ""
 
-#: includes/admin/class-wpfchs-admin.php:433
+#: includes/admin/class-wpfchs-admin.php:424
 msgid "Setup"
 msgstr ""
 
