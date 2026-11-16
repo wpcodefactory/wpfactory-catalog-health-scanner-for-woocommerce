@@ -3,7 +3,7 @@
  * Plugin Name: WPFactory Catalog Health Scanner for WooCommerce
  * Plugin URI: https://wordpress.org/plugins/wpfactory-catalog-health-scanner-for-woocommerce/
  * Description: Scan your WooCommerce catalog and find the products that are silently costing you sales.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: WPFactory
  * Author URI: https://wpfactory.com
  * Requires at least: 6.0
@@ -21,26 +21,32 @@
 defined( 'ABSPATH' ) || exit;
 
 if ( 'wpfactory-catalog-health-scanner-for-woocommerce.php' === basename( __FILE__ ) ) {
-	/**
-	 * Check if Pro plugin version is activated.
-	 *
-	 * @version 1.0.0
-	 * @since   1.0.0
-	 */
-	$plugin = 'wpfactory-catalog-health-scanner-for-woocommerce-pro/wpfactory-catalog-health-scanner-for-woocommerce-pro.php';
-	if (
-		in_array( $plugin, (array) get_option( 'active_plugins', array() ), true ) ||
-		(
-			is_multisite() &&
-			array_key_exists( $plugin, (array) get_site_option( 'active_sitewide_plugins', array() ) )
-		)
-	) {
+	if ( ! function_exists( 'wpfchs_is_pro_activated' ) ) {
+		/**
+		 * Check if Pro plugin version is activated.
+		 *
+		 * @version 1.1.2
+		 * @since   1.0.0
+		 */
+		function wpfchs_is_pro_activated() {
+			$plugin = 'wpfactory-catalog-health-scanner-for-woocommerce-pro/wpfactory-catalog-health-scanner-for-woocommerce-pro.php';
+			return (
+				in_array( $plugin, (array) get_option( 'active_plugins', array() ), true ) ||
+				(
+					is_multisite() &&
+					array_key_exists( $plugin, (array) get_site_option( 'active_sitewide_plugins', array() ) )
+				)
+			);
+		}
+	}
+
+	if ( wpfchs_is_pro_activated() ) {
 		defined( 'WPFCHS_FILE_FREE' ) || define( 'WPFCHS_FILE_FREE', __FILE__ );
 		return;
 	}
 }
 
-defined( 'WPFCHS_VERSION' ) || define( 'WPFCHS_VERSION', '1.1.1' );
+defined( 'WPFCHS_VERSION' ) || define( 'WPFCHS_VERSION', '1.1.2' );
 
 defined( 'WPFCHS_FILE' ) || define( 'WPFCHS_FILE', __FILE__ );
 

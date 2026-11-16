@@ -4,7 +4,7 @@ Tags: woocommerce, products, audit, catalog, inventory
 Requires at least: 6.0
 Requires PHP: 7.4
 Tested up to: 7.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -101,6 +101,9 @@ Adds changes-only rescanning, redesigns the first page of the report around the 
 Initial release.
 
 == Changelog ==
+
+= 1.1.2 - 16/11/2026 =
+* Dev - Coding standards improved.
 
 = 1.1.1 - 13/11/2026 =
 * Dev - WPFactory Key Manager - Added.
